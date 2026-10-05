@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.37531.7 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sklad", "Sklad\Sklad.csproj", "{92A17D7F-D242-42BA-8B6B-DB91026A0B76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataEntity", "DataEntity\DataEntity.csproj", "{CA082191-F757-4526-8A25-1B424764EE6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{92A17D7F-D242-42BA-8B6B-DB91026A0B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92A17D7F-D242-42BA-8B6B-DB91026A0B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92A17D7F-D242-42BA-8B6B-DB91026A0B76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA082191-F757-4526-8A25-1B424764EE6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA082191-F757-4526-8A25-1B424764EE6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA082191-F757-4526-8A25-1B424764EE6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA082191-F757-4526-8A25-1B424764EE6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
