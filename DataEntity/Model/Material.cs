@@ -5,11 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using PropertyChanged;
 
 namespace DataEntity
 {
+    [AddINotifyPropertyChangedInterface]
     [Table("Materials")]
-    public class Material
+    public class Material : BaseModel
     {
         [Key]
         public int MaterialId { get; set; }
@@ -31,6 +33,20 @@ namespace DataEntity
         [Required(ErrorMessage = "Jednotka měření je povinná.")]
         public virtual UnitOfMeasure UnitOfMeasure { get; set; } = new UnitOfMeasure(); //Navigační vlastnost pro jednotku měření
 
+        private int quantity;
+
+        // public int Quantity
+        // {
+        //   get => quantity;
+        // set
+        //{
+        //                 quantity = value;
+        //OnPropertyChanged();
+        //}
+        // }
+
+        // public int Quantity2 { get; set; } //ekvivalentní zápis k Quantity
+        //Nemusí díky  [AddINotifyPropertyChangedInterface]
 
     }
 }

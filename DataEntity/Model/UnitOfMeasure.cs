@@ -6,11 +6,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PropertyChanged;
 
 namespace DataEntity
 {
+    [AddINotifyPropertyChangedInterface]
     [Table("UnitsOfMeasure")]
-    public class UnitOfMeasure
+    public class UnitOfMeasure : BaseModel
     {
         [Key]
         public int UnitOfMeasureId { get; set; }
