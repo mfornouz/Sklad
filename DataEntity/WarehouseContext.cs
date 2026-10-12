@@ -7,6 +7,8 @@ namespace DataEntity
     {
         public DbSet<Material> Materials { get; set; }
 
+        public DbSet<UnitOfMeasure> UnitsOfMeasure { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
