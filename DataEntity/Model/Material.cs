@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using PropertyChanged;
+using System.Collections.ObjectModel;
 
 namespace DataEntity
 {
@@ -34,6 +35,9 @@ namespace DataEntity
         public virtual UnitOfMeasure UnitOfMeasure { get; set; } = new UnitOfMeasure(); //Navigační vlastnost pro jednotku měření
 
         private int quantity;
+
+        public virtual ObservableCollection<Pallet> Pallets { get; set; } = new (); //Navigační vlastnost pro palety
+
 
         // public int Quantity
         // {

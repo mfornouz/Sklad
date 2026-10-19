@@ -24,7 +24,7 @@ namespace Sklad
 
             var context = new WarehouseContext();
             context.Seed(); // Seed the database with initial data if necessary
-
+                      
         }
     }
 }
