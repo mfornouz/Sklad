@@ -32,9 +32,10 @@ public class Pallet : BaseModel, IValidatableObject
 
     public string? Comment { get; set; }
 
-    private void OnMaterialChanged() => OnPropertyChanged(nameof(Quantity));
-    private void OnQuantityChanged() => OnPropertyChanged(nameof(Material));
+    //private void OnMaterialChanged() => OnPropertyChanged(nameof(Quantity));
+    //private void OnQuantityChanged() => OnPropertyChanged(nameof(Material));
 
+    //ukázka validace, že pokud je Material null, Quantity musí být 0
     public IEnumerable<ValidationResult> Validate(ValidationContext context)
     {
         if (Material is null && Quantity != 0)
@@ -43,4 +44,3 @@ public class Pallet : BaseModel, IValidatableObject
                 new[] { nameof(Material), nameof(Quantity) });
     }
 }
-
