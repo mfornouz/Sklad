@@ -21,6 +21,20 @@ namespace DataEntity
                 ).UseLazyLoadingProxies();
             }
         }
+
+            public void ClearAndReseed()
+        {
+            Database.ExecuteSqlRaw("DELETE FROM [Materials]");
+            Database.ExecuteSqlRaw("DELETE FROM [UnitsOfMeasure]");
+            Database.ExecuteSqlRaw("DELETE FROM [Pallets]");
+
+            Database.ExecuteSqlRaw("DBCC CHECKIDENT ('[Materials]', RESEED, 0)");
+            Database.ExecuteSqlRaw("DBCC CHECKIDENT ('[UnitsOfMeasure]', RESEED, 0)");
+            Database.ExecuteSqlRaw("DBCC CHECKIDENT ('[Pallets]', RESEED, 0)");
+
+
+        }
+
             public void Seed()
         {
             // Pokud již v databázi existují jakékoliv jednotky nebo materiály, metoda skončí a nic nepřepíše
@@ -59,6 +73,7 @@ namespace DataEntity
             SaveChanges();
         
     }
+
     }
     
 }
