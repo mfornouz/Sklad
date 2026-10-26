@@ -20,7 +20,7 @@
                        FontWeight="Bold" Margin="5"/>
         </StackPanel>
 
-        <Border BorderBrush="AliceBlue" BorderThickness="5" Grid.Row="1" Background="LightGray"/>
+        <Border BorderBrush="AliceBlue" BorderThickness="5" Grid.Row="1" Background="White"/>
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -28,7 +28,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <GroupBox Header="Tabulky" Margin="15" FontSize="16" FontWeight="Bold">
+            <GroupBox Header="Tabulky" Margin="15" FontSize="16" FontWeight="Bold" IsEnabled="{Binding IsTablesEnabled}">
 
                 <StackPanel>
 
@@ -39,19 +39,43 @@
                        </StackPanel>
                     </Button>
 
+                    <Button Margin="10" Padding="10">
+                        <StackPanel>
+                            <Image Source="/Images/MainMenu/paleta.png" Width="48"/>
+                            <TextBlock Text="Palety" FontSize="14" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
                 </StackPanel>
                 
             </GroupBox>
-            
+
+            <GroupBox Header="Přehledy" Margin="15" FontSize="16" FontWeight="Bold" Grid.Column="1">
+
+                <StackPanel>
+
+                    <Button Margin="10" Padding="10">
+                        <StackPanel>
+                            <Image Source="/Images/MainMenu/prehledmat.png" Width="48"/>
+                            <TextBlock Text="Přehled materiálu" FontSize="14" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Margin="10" Padding="10">
+                        <StackPanel>
+                            <Image Source="/Images/MainMenu/prehledpal.png" Width="48"/>
+                            <TextBlock Text="Přehled palet" FontSize="14" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                </StackPanel>
+
+            </GroupBox>
+
             
         </Grid>
 
-        <TextBlock Text="Připraven" Margin="5" FontSize="12" Grid.Row="2"/>
-
-
-        <!--<Button Content="Click Me" Width="100" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="98,108,0,0" VerticalAlignment="Top" Width="100" Source="/Images/Icons/Add.png"/>-->
-
-
+        <CheckBox Content="Povolit tabulky" Grid.Row="2" Margin="5" IsChecked="{Binding IsTablesEnabled}"/>
+        
     </Grid>
 </Window>
